@@ -1,6 +1,6 @@
 <template>
     <div>
-        Home
+        Home / <inertia-link href="/todos">Todos</inertia-link>
     </div>
 </template>
 
