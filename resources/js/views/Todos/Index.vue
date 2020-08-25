@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <Layout title="Todos">
         <div v-if="$page.flash.message" class="alert">
             {{ $page.flash.message }}
         </div>
@@ -9,7 +9,7 @@
         <div v-else v-for="todo in todos">
             {{ todo.description }}
         </div>
-    </div>
+    </Layout>
 </template>
 
 <script>

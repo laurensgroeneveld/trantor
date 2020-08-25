@@ -1,12 +1,9 @@
 <template>
-    <div>
-        <div>
-            Home / <inertia-link href="/todos">Todos</inertia-link>
-        </div>
+    <Layout title="Home">
         <div>
             <CreateTodoForm />
         </div>
-    </div>
+    </Layout>
 </template>
 
 <script>

@@ -1,7 +1,10 @@
 import { InertiaApp } from '@inertiajs/inertia-vue';
 import Vue from 'vue';
+import Layout from './views/Layout';
 
 Vue.use(InertiaApp);
+
+Vue.component('Layout', Layout)
 
 const app = document.getElementById('app');
 
