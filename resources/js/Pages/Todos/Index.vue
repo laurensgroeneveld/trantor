@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div v-if="$page.flash.message" class="alert">
+            {{ $page.flash.message }}
+        </div>
         <div v-if="todos.length === 0">
             Geen todos gevonden.
         </div>

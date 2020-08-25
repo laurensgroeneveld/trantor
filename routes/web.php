@@ -14,5 +14,6 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', 'HomeController');
-Route::get('/todos', 'TodosController@index');
+Route::get('/', 'HomeController')->name('home');
+Route::get('/todos', 'TodosController@index')->name('todos.index');
+Route::post('/todos', 'TodosController@store')->name('todos.store');

@@ -1,15 +1,20 @@
 <template>
     <div>
-        Home / <inertia-link href="/todos">Todos</inertia-link>
+        <div>
+            Home / <inertia-link href="/todos">Todos</inertia-link>
+        </div>
+        <div>
+            <CreateTodoForm />
+        </div>
     </div>
 </template>
 
 <script>
-    export default {
+    import CreateTodoForm from "./Todos/CreateTodoForm";
 
+    export default {
+        components: {
+            CreateTodoForm
+        }
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
