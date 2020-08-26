@@ -4,7 +4,7 @@
       <inertia-link href="/">Home</inertia-link>
       <inertia-link href="/todos">Todos</inertia-link>
     </nav>
-    <div>
+    <div class="container">
       <slot />
     </div>
   </div>
