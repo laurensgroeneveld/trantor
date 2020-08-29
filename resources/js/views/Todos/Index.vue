@@ -3,14 +3,18 @@
         <div v-if="$page.flash.message" class="alert">
             {{ $page.flash.message }}
         </div>
-        <div v-if="todos.length === 0">
+        <div v-if="todos.length === 0" class="text-center text-sm text-gray-700">
             Geen todos gevonden.
         </div>
         <div v-else v-for="todo in todos" :key="todo.id">
-            <div class="flex justify-between mb-4">
+            <div class="bg-white shadow rounded-lg p-5 flex justify-between mb-4">
                 <div>
-                    {{ todo.description }}
-                    {{ todo.deadline }}
+                    <div class="text-sm text-blue-800">
+                        {{ todo.deadline }}
+                    </div>
+                    <div class="text-gray-900">
+                        {{ todo.description }}
+                    </div>
                 </div>
                 <div>
                     <ResolveTodoForm :todo="todo" />

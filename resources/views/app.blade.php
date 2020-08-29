@@ -7,7 +7,7 @@
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <title>Trantor</title>
   </head>
-  <body>
+  <body class="bg-gray-100">
     @inertia
   </body>
 </html>
