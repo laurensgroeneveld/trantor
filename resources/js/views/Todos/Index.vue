@@ -1,6 +1,6 @@
 <template>
     <Layout title="Todos">
-        <div v-if="$page.flash.message" class="alert">
+        <div v-if="$page.flash.message" class="bg-blue-300 text-blue-900 rounded shadow p-3 mb-4">
             {{ $page.flash.message }}
         </div>
         <div v-if="todos.length === 0" class="text-center text-sm text-gray-700">
