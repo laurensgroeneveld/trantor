@@ -9,8 +9,8 @@
         <div v-else v-for="todo in todos" :key="todo.id">
             <div class="bg-white shadow rounded-lg p-5 flex justify-between mb-4">
                 <div>
-                    <div class="text-sm text-blue-800">
-                        {{ todo.deadline }}
+                    <div :class="['text-sm', {'text-blue-800': !todo.overdue}, {'text-red-600': todo.overdue}]">
+                        {{ formattedDate(todo.deadline) }}
                     </div>
                     <div class="text-gray-900">
                         {{ todo.description }}
@@ -25,13 +25,21 @@
 </template>
 
 <script>
-    import ResolveTodoForm from "./ResolveTodoForm";
-    export default {
-        props: {
-            todos: Array,
-        },
-        components: {
-            ResolveTodoForm,
-        },
+import ResolveTodoForm from "./ResolveTodoForm";
+import { DateTime } from "luxon";
+
+export default {
+    props: {
+        todos: Array,
+    },
+    components: {
+        ResolveTodoForm,
+    },
+    methods: {
+        formattedDate(date) {
+            const dt = DateTime.fromISO(date);
+            return dt.setLocale("nl").toFormat("ccc d MMMM");
+        }
     }
+}
 </script>
