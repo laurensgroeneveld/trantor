@@ -32,4 +32,15 @@ class TodosController extends Controller
 
         return redirect()->route('todos.index');
     }
+
+    public function done()
+    {
+        $todos = Todo::query()
+            ->whereNotNull('resolved_at')
+            ->get();
+
+        return Inertia::render('Todos/Done', [
+            'todos' => $todos,
+        ]);
+    }
 }
